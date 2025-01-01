@@ -74,7 +74,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>HKUST(GZ), <sup>2</sup>Noah’s Ark Lab, <sup>3</sup>HKUST </span>
+                    <span class="author-block"><sup>1</sup>HKUST(GZ), <sup>2</sup>Noah's Ark Lab, <sup>3</sup>HKUST </span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -132,22 +132,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -157,7 +141,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent numerous video generation models, also known as world models, have demonstrated the ability to generate plausible real-world videos. However, many studies have shown that these models often produce motion results lacking logical or physical coherence. In this paper, we revisit video generation models and find that single-stage approaches struggle to produce high-quality results while maintaining coherent motion reasoning. To address this issue, we propose \textbf{Motion Dreamer}, a two-stage video generation framework. In Stage I, the model generates an intermediate motion representation-such as a segmentation map or depth map-based on the input image and motion conditions, focusing solely on the motion itself. In Stage II, the model uses this intermediate motion representation as a condition to generate a high-detail video. By decoupling motion reasoning from high-fidelity video synthesis, our approach allows for more accurate and physically plausible motion generation. We validate the effectiveness of our approach on the Physion dataset and in autonomous driving scenarios. For example, given a single push, our model can synthesize the sequential toppling of a set of dominoes. Similarly, by varying the movements of ego-cars, our model can produce different effects on other vehicles. Our work opens new avenues in creating models that can reason about physical interactions in a more coherent and realistic manner.
+            Recent numerous video generation models, also known as world models, have demonstrated the ability to generate plausible real-world videos. However, many studies have shown that these models often produce motion results lacking logical or physical coherence. In this paper, we revisit video generation models and find that single-stage approaches struggle to produce high-quality results while maintaining coherent motion reasoning. To address this issue, we propose <b>Motion Dreamer</b>, a two-stage video generation framework. In Stage I, the model generates an intermediate motion representation-such as a segmentation map or depth map-based on the input image and motion conditions, focusing solely on the motion itself. In Stage II, the model uses this intermediate motion representation as a condition to generate a high-detail video. By decoupling motion reasoning from high-fidelity video synthesis, our approach allows for more accurate and physically plausible motion generation. We validate the effectiveness of our approach on the Physion dataset and in autonomous driving scenarios. For example, given a single push, our model can synthesize the sequential toppling of a set of dominoes. Similarly, by varying the movements of ego-cars, our model can produce different effects on other vehicles. Our work opens new avenues in creating models that can reason about physical interactions in a more coherent and realistic manner.
           </p>
         </div>
       </div>
@@ -167,120 +151,289 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+<!-- Teaser video-->
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
       </h2>
     </div>
   </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+</section> -->
+<!-- End teaser video -->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<section class="section hero">
+    <h2 class="title">Physical Coherent Motion Generation</h2>
+    <h2 class="title is-5">Case1</h2>
+    <!-- Top-level columns: two pairs -->
+    <div class="columns is-variable is-1">
+      
+      <!-- Pair 1: [Image1, Video1], gapless inside -->
+      <div class="column">
+        <div class="columns is-gapless">
+          <!-- Image 1 -->
+          <div class="column">
+            <figure class="image is-16by16">
+              <img src="static/Multi_control_case2/ours_action1.png" alt="Image 1">
+            </figure>
+          </div>
+          <!-- Video 1 -->
+          <div class="column">
+            <video id="video1" autoplay controls muted loop style="width: 97%;">
+              <source src="static/Multi_control_case2/ours_action1-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- Pair 2: [Image2, Video2], gapless inside -->
+      <div class="column">
+        <div class="columns is-gapless">
+          <!-- Image 2 -->
+          <div class="column">
+            <figure class="image is-16by16">
+              <img src="static/Multi_control_case2/ours_action4.png" alt="Image 2">
+            </figure>
+          </div>
+          <!-- Video 2 -->
+          <div class="column">
+            <video id="video2" autoplay controls muted loop style="width: 97%;">
+              <source src="static/Multi_control_case2/ours_action4-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+
   </div>
-</section>
-<!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+<h2 class="title is-5">Case2</h2>
+  <!-- Top-level columns: two pairs -->
+  <div class="columns is-variable is-1">
+    
+    <!-- Pair 1: [Image1, Video1], gapless inside -->
+    <div class="column">
+      <div class="columns is-gapless">
+        <!-- Image 1 -->
+        <div class="column">
+          <figure class="image is-16by16">
+            <img src="static/Multi_control_case1/ours_action4.png" alt="Image 1">
+          </figure>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
+        <!-- Video 1 -->
+        <div class="column">
+          <video id="video1" autoplay controls muted loop style="width: 100%;">
+            <source src="static/Multi_control_case1/ours_action4.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+    <!-- Pair 2: [Image2, Video2], gapless inside -->
+    <div class="column">
+      <div class="columns is-gapless">
+        <!-- Image 2 -->
+        <div class="column">
+          <figure class="image is-16by16">
+            <img src="static/Multi_control_case1/ours_action1.png" alt="Image 2">
+          </figure>
+        </div>
+        <!-- Video 2 -->
+        <div class="column">
+          <video id="video2" autoplay controls muted loop style="width: 100%;">
+            <source src="static/Multi_control_case1/ours_action1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  
+</section>
+
+
+
+
+
+
+
+<section class="section hero">
+  <h2 class="title">Driving Motion Generation (comparing with MOFA-Video)</h2>
+  <h2 class="title is-5">Case1</h2>
+  <!-- Top-level columns: two pairs -->
+  <div class="columns is-variable is-1">
+    
+    <!-- Pair 1: [Image1, Video1], gapless inside -->
+    <div class="column">
+      <div class="columns">
+        <!-- Image 1 -->
+        <div class="column">
+          <figure class="image is-16by16">
+            <img src="static/Driving_motion_generation(compared_with_Mofa)/case1/Mofa_action1_prompt.png" alt="Image 1">
+          </figure>
+          <figcaption class="has-text-centered">MOFA-Vide's prompt</figcaption>
+        </div>
+        <!-- Video 1 -->
+        <div class="column">
+          <video id="video1" autoplay controls muted loop style="width: 93%;">
+            <source src="static/Driving_motion_generation(compared_with_Mofa)/case1/Mofa_action1_video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption class="has-text-centered">MOFA-Video generated</figcaption>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="column">
+    <div class="columns is-gapless">
+      <!-- Image 1 -->
+      <div class="column">
+        <figure class="image is-16by16">
+          <img src="static/Driving_motion_generation(compared_with_Mofa)/case1/Ours_action1_prompt.png" alt="Image 1">
+        </figure>
+        <figcaption class="has-text-centered">
+          Ours prompt (the yellow arrow denotes camera motion)
+        </figcaption>
+      </div>
+      <!-- Video 1 -->
+      <div class="column">
+        <video id="video1" autoplay controls muted loop style="width: 93%;">
+          <source src="static/Driving_motion_generation(compared_with_Mofa)/case1/action1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="has-text-centered">
+          Ours generated
+        </figcaption>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<h2 class="title is-5">Case2</h2>
+  <!-- Top-level columns: two pairs -->
+  <div class="columns is-variable is-1">
+    
+    <!-- Pair 1: [Image1, Video1], gapless inside -->
+    <div class="column">
+      <div class="columns">
+        <!-- Image 1 -->
+        <div class="column">
+          <figure class="image is-16by16">
+            <img src="static/Driving_motion_generation(compared_with_Mofa)/case1/Mofa_action2_prompt.png" alt="Image 1">
+          </figure>
+          <figcaption class="has-text-centered">MOFA-Vide's prompt</figcaption>
+        </div>
+        <!-- Video 1 -->
+        <div class="column">
+          <video id="video1" autoplay controls muted loop style="width: 99%;">
+            <source src="static/Driving_motion_generation(compared_with_Mofa)/case1/Mofa_action2_video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption class="has-text-centered">MOFA-Video generated</figcaption>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="column">
+    <div class="columns is-gapless">
+      <!-- Image 1 -->
+      <div class="column">
+        <figure class="image is-16by16">
+          <img src="static/Driving_motion_generation(compared_with_Mofa)/case1/Ours_action2_prompt.png" alt="Image 1">
+        </figure>
+        <figcaption class="has-text-centered">
+          Ours prompt (the yellow arrow denotes camera motion)
+        </figcaption>
+      </div>
+      <!-- Video 1 -->
+      <div class="column">
+        <video id="video1" autoplay controls muted loop style="width: 99%;">
+          <source src="static/Driving_motion_generation(compared_with_Mofa)/case1/Ours_action2_video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="has-text-centered">
+          Ours generated
+        </figcaption>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="title is-5">Case3</h2>
+  <!-- Top-level columns: two pairs -->
+  <div class="columns is-variable is-1">
+    
+    <!-- Pair 1: [Image1, Video1], gapless inside -->
+    <div class="column">
+      <div class="columns">
+        <!-- Image 1 -->
+        <div class="column">
+          <figure class="image is-16by16">
+            <img src="static/Driving_motion_generation(compared_with_Mofa)/case2/Mofa_prompt.png" alt="Image 1">
+          </figure>
+          <figcaption class="has-text-centered">MOFA-Vide's prompt</figcaption>
+        </div>
+        <!-- Video 1 -->
+        <div class="column">
+          <video id="video1" autoplay controls muted loop style="width: 99%;">
+            <source src="static/Driving_motion_generation(compared_with_Mofa)/case2/Mofa.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption class="has-text-centered">MOFA-Video generated</figcaption>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="column">
+    <div class="columns is-gapless">
+      <!-- Image 1 -->
+      <div class="column">
+        <figure class="image is-16by16">
+          <img src="static/Driving_motion_generation(compared_with_Mofa)/case2/Ours_prompt.png" alt="Image 1">
+        </figure>
+        <figcaption class="has-text-centered">
+          Ours prompt (the yellow arrow denotes camera motion)
+        </figcaption>
+      </div>
+      <!-- Video 1 -->
+      <div class="column">
+        <video id="video1" autoplay controls muted loop style="width: 99%;">
+          <source src="static/Driving_motion_generation(compared_with_Mofa)/case2/Ours.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <figcaption class="has-text-centered">
+          Ours generated
+        </figcaption>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+  
+
+
+
+<section class="section hero">
+  <h2 class="title">Overview</h2>
+  <figure class="image is-16by16">
+    <img src="static/overview.png" alt="Image 1">
+  </figure>
+</section>
 
 
 <!--BibTex citation -->
